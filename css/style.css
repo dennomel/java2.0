@@ -62,6 +62,7 @@ button {
 .result {
   font-size: x-large;
   font-weight: bold;
+  margin-top: 15px;
 }
 
 footer {
