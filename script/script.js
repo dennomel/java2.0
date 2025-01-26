@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const femaleNames = [
-    "Adwoa",
     "Abena",
     "Akua",
     "Yaa",
     "Afua",
     "Ama",
     "Akosua",
+    "Adwoa",
   ];
   const maleNames = [
     "Kwasi",
