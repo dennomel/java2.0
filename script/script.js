@@ -55,3 +55,16 @@ if (isNaN(dateOfBirth.getTime())) {
     resultDiv.style,color="red";
     return;
 }
+
+const dayofWeek=calculateDayOfWeek(dateOfBirth)
+
+let akanName;
+if (genderInput ==="male"){
+    akanName = maleNames[dayOfWeek];
+} else if (genderInput=== "female") {
+    akanName = femalesNames[dayOfWeek];
+}
+
+resultDiv.textContent = 'Your Akan name is ${akanName}!';
+resultDiv.style.color = "#fff";
+    });
