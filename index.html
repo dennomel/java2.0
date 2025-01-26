@@ -3,44 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akan Word Generator</title>
+    <title>Akan Name Generator</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./script/script.js"></script>
   </head>
 
   <body>
     <main>
       <header>
         <h4>Akan Name Generator</h4>
-        <p>Know Your Akan Name Based On Your Date of birth and gender</p>
+        <p>Know Your Akan Name Based On Your Date of Birth and Gender</p>
       </header>
-      <form id="form-akan">
+      <form id="akan-form">
         <div class="form-group">
-          <label for="dayofbirth"> Day</label>
+          <label for="day">Day</label>
           <input type="number" id="day" min="1" max="31" required />
-          <label for="monthofbirth">Month</label>
-          <input type="number" min="1" max="12" required />
-          <label for="yearofbirth">Year</label>
-          <input type="number" min="1900" max="2025" required />
+          <label for="month">Month</label>
+          <input type="number" id="month" min="1" max="12" required />
+          <label for="year">Year</label>
+          <input type="number" id="year" min="1900" max="2025" required />
         </div>
 
-        <div class="'form-group">
-          <label for="'gender">Choose Your Gender</label>
+        <div class="form-group">
+          <label for="gender">Choose Your Gender</label>
           <select id="gender" name="gender" required>
-            <option value="">--select gender--</option>
+            <option value="">--Select Gender--</option>
             <option value="male">Male</option>
-            <option value="Female">Female</option>
+            <option value="female">Female</option>
           </select>
         </div>
 
-        <button>Generate my Akana name</button>
+        <button type="submit">Generate My Akan Name</button>
       </form>
 
       <div id="result" class="result">
-        <!--Akan name result will appear here-->
+        <!-- Akan name result will appear here -->
       </div>
     </main>
-    <script src="./script/script.js"></script>
+    <footer>
+      <p>&copy; 2025 Akan Name Generator. All Rights Reserved.</p>
+    </footer>
   </body>
-  <footer>@2025 Akan Name Generator</footer>
-  <footer>All Rights Reserved</footer>
 </html>

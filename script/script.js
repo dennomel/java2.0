@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const femaleNames = [
-    "Akosua",
     "Adwoa",
     "Abena",
     "Akua",
     "Yaa",
     "Afua",
     "Ama",
+    "Akosua",
   ];
   const maleNames = [
     "Kwasi",
@@ -79,6 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     resultDiv.textContent = `Your Akan name is ${akanName}!`;
-    resultDiv.style.color = "#fff";
+    resultDiv.style.color = "blue";
   });
 });

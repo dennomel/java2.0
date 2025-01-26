@@ -24,17 +24,17 @@ form {
   background: #ff7e5f;
   padding: 20px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  border-radius: 10px;
   max-width: 600px;
   margin: 0 auto;
 }
 .form-group {
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 label {
-  display: flexbox;
+  display: flex;
   margin-bottom: 5px;
   font-weight: bold;
 }
