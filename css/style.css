@@ -49,11 +49,20 @@ select {
 button {
   color: #b2ca36;
   padding: 15px 10px;
-  background-color: #ff7e5f;
+  background-color: hsl(14, 77%, 44%);
   border: none;
   cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.4s ease-in;
+  font-weight: bold;
+}
 
+.result {
+  font-size: x-large;
+  font-weight: bold;
+}
 
-
-
+footer {
+margin-top: 30px; 
+font-weight: bold; 
 }
