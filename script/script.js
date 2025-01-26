@@ -1,5 +1,4 @@
-document.addEventListener,
-  () => {
+document.addEventListener("DOMContentloaded", () => {
     const form = document.getElementById("akan-form");
     const resultDiv = document.getElementById("result");
 
@@ -32,7 +31,7 @@ document.addEventListener,
     );
 
     return (dayOfWeek + 7) % 7;
-  };
+  }
 
   form.addEventListener("submit",(event)=>
     {
