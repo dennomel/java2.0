@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Akan Word Generator</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
@@ -14,23 +15,29 @@
       </header>
       <form id="form-akan">
         <div class="form-group">
-          <label for="birthday"> Enter your date of birth</label>
-          <input type="date" id="date of birth" name="date of birth" required />
+          <label for="birthday"> Day</label>
+          <input type="number" min="1" max="31" required />
+          <label for="birthday">Month</label>
+          <input type="number" min="1" max="12" required />
+          <label for="birthday">Year</label>
+          <input type="number" min="1900" max="2025" required />
         </div>
 
-        <div>
-          <label>choose your gender</label>
-          <select>
-            <option value></option>
-            <option value></option>
-            <option value></option>
+        <div class="'form-group">
+          <label for="'gender">Choose Your Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">--select gender--</option>
+            <option value="male">Male</option>
+            <option value="Female">Female</option>
           </select>
         </div>
 
         <button>Generate my Akana name</button>
       </form>
 
-      <div></div>
+      <div id="result" class="result">
+        <!--Akan name result will appear here-->
+      </div>
     </main>
   </body>
   <footer>@2025 Akan Name Generator</footer>

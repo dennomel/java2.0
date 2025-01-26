@@ -1,89 +1,59 @@
-/* Global styles */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
-
 body {
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
-  color: #fff;
+  color: black;
+  background: linearGradient(to left, #feb47b, #ff7e5f);
+  padding: 25px;
   text-align: center;
-  padding: 20px;
 }
-
-/* Header styles */
 header {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  color: #ffe4e1;
+header h4 {
+  font-size: x-large;
+  color: #ff7e5f;
+  margin-bottom: 10px;
 }
-
-header p {
-  font-size: 1.2rem;
-  color: #fffae6;
-}
-
-/* Form styles */
 form {
-  background-color: #fff;
   color: #333;
+  background: #ff7e5f;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+  box-shadow: 0 5px 8px rgba(0,0,0,0.3);
+  border-radius; 15px;
+  max-width: 600px;
   margin: 0 auto;
 }
-
 .form-group {
-  margin-bottom: 15px;
   text-align: left;
+  margin-bottom: 15px;
 }
 
 label {
-  display: block;
+  display: flexbox;
+  margin-bottom:5px;
   font-weight: bold;
-  margin-bottom: 5px;
 }
-
 input,
 select {
+  padding: 15px;
   width: 100%;
-  padding: 10px;
-  font-size: 1rem;
+  border-radius: 10px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  font-size: xx-large;
 }
-
 button {
+  color: #b2ca36;
+  padding: 15px 10px;
   background-color: #ff7e5f;
-  color: #fff;
-  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-button:hover {
-  background-color: #feb47b;
-}
 
-/* Result styles */
-.result {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
 
-/* Footer styles */
-footer {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #ffe4e1;
+
 }
