@@ -1,69 +1,84 @@
-document.addEventListener("DOMContentloaded", () => {
-    const form = document.getElementById("akan-form");
-    const resultDiv = document.getElementById("result");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("akan-form");
+  const resultDiv = document.getElementById("result");
 
-    const femaleNames = [
-      "Akosua",
-      "Adwoa",
-      "Abenna",
-      "Akua",
-      "Yaa",
-      "Afua",
-      "Ama",
-    ];
-    const maleNames = [
-      "Kwasi",
-      "Kwadwo",
-      "Kwabena",
-      "kwaku",
-      "Yaw",
-      "Kofi",
-      "Kwames",
-    ];
-
-    const dayOfWeek = Math.floor(
-      century / 4 -
-        2 * century -
-        1 +
-        (5 * year) / 4 +
-        (26 * (month + 1)) / 10 +
-        day
-    );
-
-    return (dayOfWeek + 7) % 7;
+  if (!form || !resultDiv) {
+    console.error("Form or result element not found in the DOM.");
+    return;
   }
 
-  form.addEventListener("submit",(event)=>
-    {
+  const femaleNames = [
+    "Akosua",
+    "Adwoa",
+    "Abena",
+    "Akua",
+    "Yaa",
+    "Afua",
+    "Ama",
+  ];
+  const maleNames = [
+    "Kwasi",
+    "Kwadwo",
+    "Kwabena",
+    "Kwaku",
+    "Yaw",
+    "Kofi",
+    "Kwame",
+  ];
+
+  function calculateDayOfWeek(date) {
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    const century = Math.floor(year / 100);
+    const yearInCentury = year % 100;
+
+    const dayOfWeek = Math.floor(
+      (century / 4 -
+        2 * century -
+        1 +
+        (5 * yearInCentury) / 4 +
+        (26 * (month + 1)) / 10 +
+        day) %
+        7
+    );
+
+    return (dayOfWeek + 7) % 7; // Normalize to 0-6
+  }
+
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const dateOfBirthInput= document.getElementById("birthday").value;
-    const genderInput=document.getElementById("gender").value;
-  
+    const dayInput = document.getElementById("day").value;
+    const monthInput = document.getElementById("month").value;
+    const yearInput = document.getElementById("year").value;
+    const genderInput = document.getElementById("gender").value;
 
-if (!dateOfBirth || !genderInput){
-    resultDiv.textContent="Pleae key in a valid birthday and select your gender";
-    resultDiv.style.color= "red";
-    return;
-}
+    if (!dayInput || !monthInput || !yearInput || !genderInput) {
+      resultDiv.textContent =
+        "Please enter a valid date of birth and select your gender.";
+      resultDiv.style.color = "red";
+      return;
+    }
 
-const dateOfBirth; new dateOfBirth(dateOfBirthInput);
+    const dateOfBirth = new Date(`${yearInput}-${monthInput}-${dayInput}`);
 
-if (isNaN(dateOfBirth.getTime())) {
-    resultDiv.textContent= "Invalid date. Try again";
-    resultDiv.style,color="red";
-    return;
-}
+    if (isNaN(dateOfBirth.getTime())) {
+      resultDiv.textContent = "Invalid date. Please try again.";
+      resultDiv.style.color = "red";
+      return;
+    }
 
-const dayofWeek=calculateDayOfWeek(dateOfBirth)
+    const dayOfWeek = calculateDayOfWeek(dateOfBirth);
 
-let akanName;
-if (genderInput ==="male"){
-    akanName = maleNames[dayOfWeek];
-} else if (genderInput=== "female") {
-    akanName = femaleNames[dayOfWeek];
-}
+    let akanName;
+    if (genderInput === "male") {
+      akanName = maleNames[dayOfWeek];
+    } else if (genderInput === "female") {
+      akanName = femaleNames[dayOfWeek];
+    }
 
-resultDiv.textContent = 'Your Akan name is ${akanName}!';
-resultDiv.style.color = "#fff";
-    });
+    resultDiv.textContent = `Your Akan name is ${akanName}!`;
+    resultDiv.style.color = "#fff";
+  });
+});
