@@ -7,11 +7,11 @@
 body {
   color: black;
   background: linearGradient(to left, #feb47b, #ff7e5f);
-  padding: 25px;
+  padding: 20px;
   text-align: center;
 }
 header {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 header h4 {
@@ -22,9 +22,9 @@ header h4 {
 form {
   color: #333;
   background: #ff7e5f;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border-radius: 0px;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -42,7 +42,9 @@ input,
 select {
   padding: 15px;
   width: 100%;
-  border-radius: 10px;
+  float: bottom;
+  flex-direction: row;
+  border-radius: 5px;
   border: 1px solid #ddd;
   font-size: xx-large;
 }
