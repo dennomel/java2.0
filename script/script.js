@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "Adwoa",
   ];
   const maleNames = [
-    "Kwasi",
-    "Kwadwo",
     "Kwabena",
     "Kwaku",
     "Yaw",
     "Kofi",
     "Kwame",
+    "Kwasi",
+    "Kwadwo",
   ];
 
   function calculateDayOfWeek(date) {
