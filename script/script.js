@@ -62,7 +62,7 @@ let akanName;
 if (genderInput ==="male"){
     akanName = maleNames[dayOfWeek];
 } else if (genderInput=== "female") {
-    akanName = femalesNames[dayOfWeek];
+    akanName = femaleNames[dayOfWeek];
 }
 
 resultDiv.textContent = 'Your Akan name is ${akanName}!';
